@@ -1,8 +1,9 @@
 {
   "name": "react-collapsus",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
+  "main": "dist/App.js",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
     "@typescript-eslint/eslint-plugin": "2.10.0",
@@ -61,7 +62,13 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "prepare": "NODE_ENV=production ./node_modules/.bin/babel ./src/App.js > ./dist/App.js"
+  },
+  "peerDependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "babel-preset-react-app": "9.1.2"
   },
   "eslintConfig": {
     "extends": "react-app"
