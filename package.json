@@ -54,7 +54,8 @@
   "dependencies": {
     "@storybook/cli": "^5.3.18",
     "@storybook/react": "^5.3.18",
-    "cross-env": "^7.0.2",
-    "styled-components": "^5.0.1"
+    "cross-env": "7.0.2",
+    "lodash": "4.17.15",
+    "styled-components": "5.0.1"
   }
 }

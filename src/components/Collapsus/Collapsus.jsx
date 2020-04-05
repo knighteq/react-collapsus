@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
+
 import {
   Wrapper,
   ActionButton,
   CollapsibleWrapper
 } from './Collapsus.styles';
 
-const Collapsus = () => {
+const Collapsus = (props) => {
   const [collapsed, setCollapsed] = useState(false);
   const [height, setHeight] = useState(0);
-
-  console.log({collapsed, height});
 
   let collapsibleRef = React.createRef();
 
@@ -31,13 +30,13 @@ const Collapsus = () => {
           return setCollapsed((collapsed) => !collapsed);
         } 
 
-        return setTimeout(() => setCollapsed((collapsed) => !collapsed), 2000);
-      }}>XXX</ActionButton>
+        return setTimeout(() => setCollapsed((collapsed) => !collapsed), 300);
+      }}>{props.actionButtonText}</ActionButton>
       {
         collapsed ? (
           <CollapsibleWrapper height={height}>
             <div ref={collapsibleRef}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ex consequuntur itaque. Minus, et iure?
+              {props.content}
             </div>
           </CollapsibleWrapper>
         ) : null
