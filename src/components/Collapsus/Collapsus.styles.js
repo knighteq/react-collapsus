@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const Wrapper = styled.div`
-
-`;
+const Wrapper = styled.div``;
 
 const ActionButton = styled.button`
   cursor: pointer;
@@ -23,5 +21,5 @@ const CollapsibleWrapper = styled.div`
 export {
  Wrapper,
  ActionButton,
- CollapsibleWrapper,
+ CollapsibleWrapper
 };

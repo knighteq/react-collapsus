@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Wrapper,
   ActionButton,
-  CollapsibleWrapper
+  CollapsibleWrapper,
 } from './Collapsus.styles';
 
 const Collapsus = (props) => {
@@ -23,7 +24,7 @@ const Collapsus = (props) => {
 
   return (
     <Wrapper>
-      <ActionButton onClick={() => {
+      <ActionButton as={props.actionButtonComponent} onClick={() => {
         if (collapsed) {
           setHeight(0);
         } else {
@@ -43,6 +44,14 @@ const Collapsus = (props) => {
       }
     </Wrapper>
   );
+}
+
+Collapsus.propTypes = {
+  actionButtonComponent: PropTypes.func
+}
+
+Collapsus.defaultProps = {
+  actionButtonComponent: ActionButton
 }
 
 export default Collapsus;
