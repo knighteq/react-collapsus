@@ -1,5 +1,6 @@
 {
   "name": "react-collapsus",
+  "main": "dist/main.js",
   "version": "0.1.0",
   "devDependencies": {
     "@babel/cli": "7.8.4",
@@ -20,11 +21,13 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production --config config/webpack.config.js",
+    "prepare": "npm run build",
     "storybook": "start-storybook"
   },
   "peerDependencies": {
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "lodash": "4.17.15"
   },
   "eslintConfig": {
     "extends": [

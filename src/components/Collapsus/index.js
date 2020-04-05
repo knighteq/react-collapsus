@@ -1,1 +1,3 @@
-import { default } from './Collapsus';
+import Collapsus from './Collapsus.jsx';
+
+export default Collapsus;

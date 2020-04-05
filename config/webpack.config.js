@@ -7,11 +7,6 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: 'main.js'
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: 'React-Collapsus',
-    template: "./public/index.html",
-    filename: "./index.html"
-  })],
   module: {
     rules: [
       {

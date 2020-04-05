@@ -1,8 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import Collapsus from './components/Collapsus';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+export { Collapsus };
