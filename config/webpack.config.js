@@ -6,7 +6,6 @@ module.exports = {
   resolve: {
     alias:{
       react: path.resolve('../node_modules/react'),
-      'react-dom': path.resolve('../node_modules/react-dom')
     },
   },
   externals: {
@@ -21,12 +20,6 @@ module.exports = {
         commonjs2: 'react-dom',
         commonjs: 'react-dom',
         amd: 'react-dom'
-    },
-    lodash: {
-      commonjs: 'lodash',
-      commonjs2: 'lodash',
-      amd: 'lodash',
-      root: '_'
     }
   },
   output: {

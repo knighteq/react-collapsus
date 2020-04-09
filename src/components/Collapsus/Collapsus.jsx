@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -8,23 +8,19 @@ import {
 } from './Collapsus.styles';
 
 const Collapsus = (props) => {
-  const collapsed = false;
-  const setCollapsed = () => {};
-  const height = 15;
-  const setHeight = () => {};
-  // const [collapsed, setCollapsed] = useState(false);
-  // const [height, setHeight] = useState(0);
+  const [collapsed, setCollapsed] = useState(false);
+  const [height, setHeight] = useState(0);
 
   let collapsibleRef = React.createRef();
 
-  // useEffect(() => {
-  //   if (collapsibleRef.current) {
-  //     setHeight(collapsibleRef.current.clientHeight);
-  //   } else {
-  //     setHeight(0);
-  //   }
-  // // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [collapsed]);
+  useEffect(() => {
+    if (collapsibleRef.current) {
+      setHeight(collapsibleRef.current.clientHeight);
+    } else {
+      setHeight(0);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [collapsed]);
 
   return (
     <Wrapper>
