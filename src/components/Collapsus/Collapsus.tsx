@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, ReactComponentElement } from 'react';
-import PropTypes, { ReactNodeLike } from 'prop-types';
 
 import {
   Wrapper,
@@ -10,7 +9,7 @@ import {
 interface CollapsusProps {
   actionButtonComponent: React.ElementType,
   actionButtonText: string,
-  content: ReactNodeLike
+  content: JSX.Element
 };
 
 const Collapsus: React.FC<CollapsusProps> = (props) => {
