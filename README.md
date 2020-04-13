@@ -14,6 +14,8 @@ npm i react-collapsus
 ## Usage
 
 ```jsx
+import { Collapsus } from 'react-collapsus';
+
 <Collapsus 
   actionButtonText="Collapse"
   content="Content text" 
