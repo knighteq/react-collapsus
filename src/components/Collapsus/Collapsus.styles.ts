@@ -8,13 +8,13 @@ const ActionButton = styled.button`
   background: none;
 `;
 
-const CollapsibleWrapper = styled.div`
+const CollapsibleWrapper = styled.div<{ height: number }>`
   height: 0;
   overflow: hidden;
   transition: height 300ms;
 
   ${(props) => props.height && css`
-    height: ${(props) => props.height}px;
+    height: ${props.height}px;
   `}
 `;
 

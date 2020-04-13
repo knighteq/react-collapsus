@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Collapsus from './Collapsus';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-const actionButtonComponent = styled.div`
+const actionButtonComponent = styled.button`
   background: red;
   color: white;
   padding: 15px;

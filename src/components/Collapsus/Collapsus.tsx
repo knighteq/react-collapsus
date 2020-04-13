@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, useRef, ReactComponentElement } from 'react';
+import PropTypes, { ReactNodeLike } from 'prop-types';
 
 import {
   Wrapper,
@@ -7,11 +7,17 @@ import {
   CollapsibleWrapper,
 } from './Collapsus.styles';
 
-const Collapsus = (props) => {
+interface CollapsusProps {
+  actionButtonComponent: React.ElementType,
+  actionButtonText: string,
+  content: ReactNodeLike
+};
+
+const Collapsus: React.FC<CollapsusProps> = (props) => {
   const [collapsed, setCollapsed] = useState(false);
   const [height, setHeight] = useState(0);
 
-  let collapsibleRef = React.createRef();
+  let collapsibleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (collapsibleRef.current) {
@@ -44,10 +50,6 @@ const Collapsus = (props) => {
       }
     </Wrapper>
   );
-}
-
-Collapsus.propTypes = {
-  actionButtonComponent: PropTypes.func
 }
 
 Collapsus.defaultProps = {
