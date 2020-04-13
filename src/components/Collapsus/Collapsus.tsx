@@ -7,9 +7,9 @@ import {
 } from './Collapsus.styles';
 
 interface CollapsusProps {
-  actionButtonComponent: React.ElementType,
+  actionButtonComponent?: React.ElementType,
   actionButtonText: string,
-  content: JSX.Element
+  content: React.ReactNode
 };
 
 const Collapsus: React.FC<CollapsusProps> = (props) => {

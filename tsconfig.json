@@ -6,6 +6,7 @@
     "target": "es6",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "rootDirs": ["src"],
     "strict": true,
     "jsx": "react"
   }
