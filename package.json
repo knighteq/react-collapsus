@@ -1,5 +1,6 @@
 {
   "name": "react-collapsus",
+  "homepage": "https://knighteq.github.io/react-collapsus", 
   "main": "dist/index.js",
   "version": "0.1.2",
   "devDependencies": {
@@ -31,7 +32,10 @@
     "transpile": "cross-env NODE_ENV=production babel src -d dist --copy-files",
     "prepare": "npm run build",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --config config/webpack.config.js",
-    "release": "standard-version"
+    "release": "standard-version",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d .out"
   },
   "peerDependencies": {
     "react": "16.13.1",
