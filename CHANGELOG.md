@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/knighteq/react-collapsus/compare/v0.1.2...v0.1.3) (2020-04-18)
+
+
+### Bug Fixes
+
+* remove .out ([319fc6a](https://github.com/knighteq/react-collapsus/commit/319fc6afcdcabdf51b2cb7beeebd43ff92ee3a0a))
+
 ### [0.1.2](https://github.com/knighteq/react-collapsus/compare/v0.1.1...v0.1.2) (2020-04-13)
 
 ### 0.1.1 (2020-04-13)
