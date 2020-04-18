@@ -24,14 +24,14 @@ import { Collapsus } from 'react-collapsus';
 
 ## Props
 
-### actionButtonComponent
+### actionButtonComponent: React.ElementType
 
 Here can be passed a styled-component with own styling.
 
-### actionButtonText
+### actionButtonText: string
 
 Just the text in the action button.
 
-### content
+### content: React.ReactNode
 
 Collapsed content, it can be a node.
