@@ -11,6 +11,10 @@ A Styled-Component based collapse package.
 npm i react-collapsus
 ```
 
+## Storybook
+
+https://knighteq.github.io/react-collapsus/?path=/story/collapsus--default
+
 ## Usage
 
 ```jsx
