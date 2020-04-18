@@ -39,3 +39,8 @@ Just the text in the action button.
 ### content: React.ReactNode
 
 Collapsed content, it can be a node.
+
+### transitionTime: number
+
+Animation time (default 300ms).
+
