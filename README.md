@@ -4,7 +4,18 @@
 
 A Styled-Component based collapse package.
 
+## Recommendations 
 
+npm 6.12.0+
+
+node v12.13.0+
+
+### Browsers
+`
+  ">0.2%",
+  "not dead",
+  "not op_mini all"
+`
 ## Instalation
 
 ```
