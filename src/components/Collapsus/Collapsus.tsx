@@ -9,7 +9,8 @@ import {
 interface CollapsusProps {
   actionButtonComponent?: React.ElementType,
   actionButtonText: string,
-  content: React.ReactNode
+  content: React.ReactNode,
+  transitionTime?: number
 };
 
 const Collapsus: React.FC<CollapsusProps> = (props) => {
@@ -36,11 +37,14 @@ const Collapsus: React.FC<CollapsusProps> = (props) => {
           return setCollapsed((collapsed) => !collapsed);
         } 
 
-        return setTimeout(() => setCollapsed((collapsed) => !collapsed), 300);
+        return setTimeout(() => setCollapsed((collapsed) => !collapsed), props.transitionTime);
       }}>{props.actionButtonText}</ActionButton>
       {
         collapsed ? (
-          <CollapsibleWrapper height={height}>
+          <CollapsibleWrapper
+            height={height}
+            transitionTime={props.transitionTime!}
+          >
             <div ref={collapsibleRef}>
               {props.content}
             </div>
@@ -52,7 +56,8 @@ const Collapsus: React.FC<CollapsusProps> = (props) => {
 }
 
 Collapsus.defaultProps = {
-  actionButtonComponent: ActionButton
+  actionButtonComponent: ActionButton,
+  transitionTime: 300
 }
 
 export default Collapsus;
