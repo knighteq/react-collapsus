@@ -55,3 +55,7 @@ Collapsed content, it can be a node.
 
 Animation time (default 300ms).
 
+
+## License
+
+MIT
